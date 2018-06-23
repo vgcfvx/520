@@ -1,11 +1,17 @@
 #!/usr/bin/python3
 nome = input("Nome do aluno: ")
-soma = int(input("Digite nota 1: "))
-soma += int(input("Digite nota 2: "))
-print("{} tem a media {}".format(nome.title(),soma/2))
-if soma >= 14 :
-     print("{} foi aprovado".format(nome.title()))
-elif soma>8 and soma <14:
-     print("{} foi retido".format(nome.title()))
+soma = 0
+provas = int(input("Quantas provas? "))
+for x in range(provas):
+    nota = int(input("Digite a nota {} =".format(x+1)))
+    soma+=nota    
+media = soma/provas    
+if media >= 7 :
+     res = 'Aprovado'
+elif media >4 and media <7:
+     res = 'Retido'
 else:
-     print("{} foi reprovado".format(nome.title()))     
+     res = 'Reprovado'
+
+print("{} tem a media {} e foi {}".format(nome.title(),media,res.title()))     
+
