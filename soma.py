@@ -15,3 +15,4 @@ else:
 
 print("{} tem a media {} e foi {}".format(nome.title(),media,res.title()))     
 
+#for x in range(65,65+26): print(chr(x))
